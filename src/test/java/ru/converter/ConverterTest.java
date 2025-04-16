@@ -1,6 +1,7 @@
 package ru.converter;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
 
 class ConverterTest {
@@ -15,7 +16,7 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert300RblThen1Dot4Euro() {
+    void whenConvert300RblThen3Euro() {
         float in = 300F;
         float expected = 3F;
         float out = Converter.rubleToEuro(in);
@@ -24,7 +25,7 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert200RblThen1Dot4Euro() {
+    void whenConvert200RblThen2Euro() {
         float in = 200F;
         float expected = 2F;
         float out = Converter.rubleToEuro(in);
@@ -33,7 +34,7 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert180RblThen2dot22222Dlr() {
+    void whenConvert180RblThen2Dlr() {
         float in = 180F;
         float expected = 2F;
         float out = Converter.rubleToDollar(in);
@@ -42,7 +43,7 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert200RblThen2dot22222Dlr() {
+    void whenConvert200RblThen2dot2222Dlr() {
         float in = 200F;
         float expected = 2.2222F;
         float out = Converter.rubleToDollar(in);
@@ -51,7 +52,7 @@ class ConverterTest {
     }
 
     @Test
-    void whenConvert0RblThen2dot22222Dlr() {
+    void whenConvert0RblThen0() {
         float in = 0F;
         float expected = 0F;
         float out = Converter.rubleToDollar(in);
