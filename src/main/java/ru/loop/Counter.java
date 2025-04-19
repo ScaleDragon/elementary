@@ -8,14 +8,18 @@ public class Counter {
                 result += i;
             }
         } else {
-            throw new IllegalArgumentException("The second number should be equal to or more than the first");
+            try {
+                throw new IllegalArgumentException("The second number should be equal to or more than the first");
+            } catch (IllegalArgumentException e) {
+                System.out.print(e.getMessage() + ": ");
+            }
         }
         return result;
     }
 
     public static void main(String[] args) {
         System.out.println(sum(0, 10));
-        System.out.println(sum(3, 8));
+        System.out.println(sum(3, -8));
         System.out.println(sum(1, 1));
     }
 }
