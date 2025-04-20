@@ -7,12 +7,6 @@ public class Counter {
             for (int i = start; i <= finish; i++) {
                 result += i;
             }
-        } else {
-            try {
-                throw new IllegalArgumentException("The second number should be equal to or more than the first");
-            } catch (IllegalArgumentException e) {
-                System.out.print(e.getMessage() + ": ");
-            }
         }
         return result;
     }
@@ -24,12 +18,6 @@ public class Counter {
                 if (i % 2 == 0) {
                     result += i;
                 }
-            }
-        } else {
-            try {
-                throw new IllegalArgumentException("The second number should be equal to or more than the first");
-            } catch (IllegalArgumentException e) {
-                System.out.print(e.getMessage() + ": ");
             }
         }
         return result;
