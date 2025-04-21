@@ -2,14 +2,13 @@ package ru.loop;
 
 public class CheckPrimeNumber {
     public static boolean check(int number) {
-        if (number <= 1) {
-            return false;
-        }
+        boolean prime = false;
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
                 return false;
             }
+            prime = true;
         }
-        return true;
+        return prime;
     }
 }
