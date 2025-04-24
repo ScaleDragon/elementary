@@ -2,8 +2,8 @@ package ru.array;
 
 public class MatrixCheck {
     public static boolean monoHorizontal(char[][] board, int row) {
-        for (int i = row; i <= row; i++) {
-            if (board[i][i] != 'X') {
+        for (int i = 0; i < board[row].length; i++) {
+            if (board[row][i] != 'X') {
                 return false;
             }
         }
