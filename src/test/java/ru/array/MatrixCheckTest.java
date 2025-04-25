@@ -140,4 +140,44 @@ public class MatrixCheckTest {
         boolean result = MatrixCheck.isWin(input);
         assertThat(result).isFalse();
     }
+
+    @Test
+    public void whenDataDiagMonoIsTrueThenTrue() {
+        char[][] input = {
+                {'X', ' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', ' ', 'X'},
+                {' ', ' ', ' ', ' ', 'X'}
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    public void whenDataVerticalMonoIsTrueThenFalse() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '}
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    public void whenDataHorizontalMonoIsTrueThenTrue() {
+        char[][] input = {
+                {'X', ' ', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '}
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isTrue();
+    }
+
 }
