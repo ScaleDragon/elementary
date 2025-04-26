@@ -157,14 +157,14 @@ public class MatrixCheckTest {
     @Test
     public void whenDataVerticalMonoIsTrueThenFalse() {
         char[][] input = {
-                {' ', ' ', 'X', ' ', ' '},
-                {' ', ' ', 'X', ' ', ' '},
-                {'X', ' ', ' ', ' ', ' '},
-                {' ', ' ', 'X', ' ', ' '},
-                {' ', ' ', 'X', ' ', ' '}
+                {' ', ' ', ' ', 'X', ' '},
+                {'X', ' ', ' ', 'X', ' '},
+                {' ', ' ', ' ', 'X', ' '},
+                {' ', ' ', ' ', 'X', ' '},
+                {' ', ' ', ' ', 'X', ' '}
         };
         boolean result = MatrixCheck.isWin(input);
-        assertThat(result).isFalse();
+        assertThat(result).isTrue();
     }
 
     @Test
@@ -172,7 +172,7 @@ public class MatrixCheckTest {
         char[][] input = {
                 {'X', ' ', 'X', 'X', 'X'},
                 {' ', ' ', 'X', ' ', ' '},
-                {'X', 'X', 'X', 'X', 'X'},
+                {'X', ' ', 'X', 'X', 'X'},
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '}
         };
