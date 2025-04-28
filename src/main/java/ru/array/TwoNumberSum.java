@@ -9,7 +9,7 @@ public class TwoNumberSum {
                 if (array[i] + array[j] == target) {
                     return new int[]{i, j};
                 }
-                if (array[i] + array[j] > target) {
+                if (array[i + 1] + array[j] > target) {
                     j--;
                 } else {
                     i++;
