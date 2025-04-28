@@ -40,4 +40,13 @@ class TwoNumberSumTest {
         int[] expected = {2, 4};
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whenEightEqualsNumbersYesTarget() {
+        int[] array = {0, 1, 3, 5, 8, 10, 12, 13};
+        int target = 14;
+        int[] result = TwoNumberSum.getIndexes(array, target);
+        int[] expected = {1, 7};
+        assertThat(result).isEqualTo(expected);
+    }
 }
