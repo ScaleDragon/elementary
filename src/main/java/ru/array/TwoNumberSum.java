@@ -6,12 +6,14 @@ public class TwoNumberSum {
             int j = array.length - 1;
             int i = 0;
             while (i < j) {
-                if (array[i] + array[j] == target) {
+                int rsl = array[i] + array[j];
+                if (rsl == target) {
                     return new int[]{i, j};
                 }
-                i++;
-                if (array[i] + array[j] > target) {
+                if (rsl > target) {
                     j--;
+                } else {
+                    i++;
                 }
             }
         }
