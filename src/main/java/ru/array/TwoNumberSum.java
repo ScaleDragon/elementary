@@ -10,8 +10,7 @@ public class TwoNumberSum {
                     return new int[]{i, j};
                 }
                 i++;
-                int count = array[i] + array[j];
-                if (count > target) {
+                if (array[i] + array[j] > target) {
                     j--;
                 }
             }
