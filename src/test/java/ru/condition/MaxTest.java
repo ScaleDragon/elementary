@@ -83,8 +83,4 @@ class MaxTest {
         int expected = 10;
         assertThat(result).isEqualTo(expected);
     }
-
-    @Test
-    void testMax() {
-    }
 }
