@@ -35,14 +35,28 @@ class PointTest {
 
     @Test
     void when5And6To0And3Then5Dot83() {
-        int x1 = 5;
-        int y1 = 6;
-        int x2 = 0;
-        int y2 = 3;
         Point a = new Point(5, 6);
         Point b = new Point(0, 3);
         double expected = 5.83;
         double out = a.distance(b);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void when5And6And2To0And3And1Then5Dot91() {
+        Point a = new Point(5, 6, 2);
+        Point b = new Point(0, 3, 1);
+        double expected = 5.91;
+        double out = a.distance3d(b);
+        assertThat(out).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void when0AndMinus1And4ToMinus1And3And5To5Then4Dot24() {
+        Point a = new Point(0, -1, 4);
+        Point b = new Point(-1, 3, 5);
+        double expected = 4.24;
+        double out = a.distance3d(b);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
     }
 }
